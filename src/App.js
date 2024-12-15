@@ -3,6 +3,7 @@ import { AuthContext, AuthProvider } from './context/AuthContext';
 import Auth from './components/Auth';
 import MainApp from './MainApp';
 import Loading from './components/Loading';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
     const { currentUser, loading } = useContext(AuthContext);
@@ -18,10 +19,18 @@ function App() {
     );
 }
 
+
+const router = createBrowserRouter([
+   {
+     path: "/",
+     element: <App />
+   }
+]);
+
 function AppWrapper() {
     return (
         <AuthProvider>
-            <App />
+             <RouterProvider router={router} />
         </AuthProvider>
     )
 }

@@ -23,6 +23,11 @@ Follow these instructions to get the app up and running on Netlify:
     *   Enable **Google** as a sign-in provider.
     *   Under **Authorized domains**, add the domain of the email you will use to sign in with (e.g., `@gmail.com`). This ensures that only you can log in initially. You can invite collaborators later by adding their email domains to this list.
 
+*   **Add your Netlify Domain**
+   *    Once you have deployed your site in Netlify, copy your deployed URL (e.g., `your-site-name.netlify.app`).
+    *   In your Firebase project, go to **Authentication**, and then **Settings**.
+    *   Under **Authorized domains**, add your Netlify domain URL to the list (e.g., `your-site-name.netlify.app`). This allows your Netlify site to use Firebase Authentication.
+
 *   **Enable Firestore:**
     *   In your Firebase project, go to **Firestore Database** and create a new database.
 
@@ -47,6 +52,7 @@ Follow these instructions to get the app up and running on Netlify:
 *   Create a Netlify account (if you don't have one) and log in.
 *   Click on "Add new site" and select "Import an existing project from Git"
 *   Select your forked GitHub repository
+*  Ensure that the `gemini.js` file is inside the `src/functions` folder.
 *   Under **Build settings** ensure that the build command is `npm run build` and that the deploy directory is `build`.
 
 ### 5. Set Environment Variables in Netlify
@@ -64,7 +70,7 @@ Follow these instructions to get the app up and running on Netlify:
 ### 6. Start Learning
 
 *   Open your deployed application on Netlify.
-*   Sign in with your Google account (that matches the domain you authorised)
+*   Sign in with your Google account (that matches the domain you authorized)
 *   Start learning by entering a topic, selecting a level, and answering questions!
 
 ## Contributing
