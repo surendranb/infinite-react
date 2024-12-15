@@ -1,10 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import AppWrapper from './App'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <AppWrapper />
-  </React.StrictMode>,
-)
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+   build: {
+    rollupOptions: {
+      input: {
+        main: 'src/main.jsx',
+      },
+    },
+  },
+})
