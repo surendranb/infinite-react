@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext, AuthProvider } from './context/AuthContext';
 import Auth from './components/Auth';
-import MainApp from './MainApp';
+import MainApp from './MainApp'; // Ensure this is correct
 import Loading from './components/Loading';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
