@@ -1,6 +1,6 @@
 import React from 'react';
 import { signInWithGoogle } from '../firebase';
-import {Button} from '@headlessui/react';
+import { Button } from '@headlessui/react'; // Correct import path
 
 const Auth = () => {
     return (
