@@ -1,16 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  publicDir: 'public',
    build: {
-        external: ['fsevents'],
         rollupOptions: {
-            output: {
-                 assetFileNames: 'assets/[name].[ext]'
-            }
-        }
+            input: {
+                main: path.resolve(__dirname, 'public/index.html'),
+            },
+        },
+      external: ['fsevents'],
     },
-    publicDir: 'public'
 })
