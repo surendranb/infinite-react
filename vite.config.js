@@ -5,7 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
    build: {
-      external: ['fsevents'],
+        external: ['fsevents'],
+        rollupOptions: {
+            output: {
+                 assetFileNames: 'assets/[name].[ext]'
+            }
+        }
     },
-    publicDir: 'public',
+    publicDir: 'public'
 })
