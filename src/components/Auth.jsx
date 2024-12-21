@@ -1,6 +1,5 @@
 import React from 'react';
 import { signInWithGoogle } from '../firebase';
-import { Button } from '@headlessui/react/dist/components/Button'; // Correct import path
 
 const Auth = () => {
     return (
@@ -18,12 +17,12 @@ const Auth = () => {
                     <p className="text-gray-600">Sign in to start learning</p>
                 </div>
 
-                <Button
+                <button
                      onClick={signInWithGoogle}
                     className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
                 >
                   Sign in with Google
-                </Button>
+                </button>
             </div>
         </div>
     );
