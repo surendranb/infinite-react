@@ -7,10 +7,10 @@ export default defineConfig({
   plugins: [react()],
   publicDir: 'public',
    build: {
-        // copyPublicDir: false,
+        copyPublicDir: false,
         rollupOptions: {
             input: {
-                main: path.resolve(__dirname, 'src/main.jsx'),
+                main: path.resolve(__dirname, 'public/index.html'),
             },
         },
       external: ['fsevents'],
