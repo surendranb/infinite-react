@@ -8,11 +8,11 @@ export default defineConfig({
   publicDir: 'public',
    build: {
         copyPublicDir: false,
-        rollupOptions: {
-            input: {
-                main: path.resolve(__dirname, 'public/index.html'),
-            },
-        },
+        // rollupOptions: {
+        //     input: {
+        //         main: path.resolve(__dirname, 'public/index.html'),
+        //     },
+        // },
       external: ['fsevents'],
     },
 })
