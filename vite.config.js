@@ -10,7 +10,7 @@ export default defineConfig({
         copyPublicDir: false,
         rollupOptions: {
             input: {
-                main: path.resolve(__dirname, 'public/index.html'),
+                main: path.resolve(__dirname, 'src/main.jsx'),
             },
         },
       external: ['fsevents'],
