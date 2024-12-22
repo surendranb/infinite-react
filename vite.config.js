@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   publicDir: 'public',
    build: {
-        copyPublicDir: false,
+        // copyPublicDir: false,
         rollupOptions: {
             input: {
                 main: path.resolve(__dirname, 'src/main.jsx'),
